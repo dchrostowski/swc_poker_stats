@@ -36,6 +36,19 @@ services:
       - dbdata:/data/db
     networks:
       - app-network
+  nodejs2:
+    build: 
+      context: .
+      dockerfile: ScraperDockerfile
+    security_opt:
+      - seccomp=./swc_scraper/chrome.json
+    image: node:12-slim
+    container_name: nodejs2
+    volumes:
+      - .:/home/pptruser/app
+    command: ["/home/pptruser/app/start_scraper.sh"]
+    networks: 
+      - app-network
 
 networks:
   app-network:
@@ -44,3 +57,4 @@ networks:
 volumes:
   node_modules:
   dbdata:
+
