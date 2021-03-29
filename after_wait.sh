@@ -1,4 +1,4 @@
 #! /bin/sh
-
-cd ./swc_standings
+ls -al
+npm install
 npm start

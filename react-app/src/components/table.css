@@ -1,0 +1,92 @@
+
+.jss157 {
+    padding: 24px;
+    background-color: transparent;
+}
+.jss155 {
+    border-radius: 4px;
+}
+.jss155 {
+    margin: auto;
+    display: flex;
+    outline: 0;
+    position: relative;
+    justify-content: center;
+}
+
+.jss154 {
+    padding: 0px 8px;
+    margin-left: 0;
+    margin-right: 0;
+}
+.jss154 {
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-bottom: 40px;
+}
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+.top-span {
+    background-color:rgba(81, 81, 81, 1);
+    font-size: 32;
+    color: white;
+}
+
+body {
+    color:gray;
+    font-size: 0.875rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+}
+
+.MuiTableContainer-root {
+    width: 100%;
+    overflow-x: auto;
+}
+.MuiPaper-elevation1 {
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-rounded {
+    border-radius: 4px;
+}
+.MuiPaper-root {
+    color: #fff;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-color: #424242;
+}
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+.MuiTable-root {
+    width: 100%;
+    display: table;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.MuiTableCell-root {
+    display: table-cell;
+    padding: 16px;
+    font-size: 0.875rem;
+    text-align: left;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    border-bottom: 1px solid rgba(81, 81, 81, 1);
+    letter-spacing: 0.01071em;
+    vertical-align: inherit;
+}
+
+th.MuiTableCell-head {
+    color:white
+}
+
+td.MuiTableCell-body {
+    color: white;
+    font-weight: 600;
+}
