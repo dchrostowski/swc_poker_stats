@@ -1,12 +1,12 @@
 version: '3'
 
 services:
-  nodejs: 
+  nodejs1: 
     build: 
       context: .
-      dockerfile: Dockerfile
+      dockerfile: 1.Dockerfile
     image: nodejs
-    container_name: nodejs
+    container_name: nodejs1
     restart: unless-stopped
     env_file: .env
     environment: 
@@ -39,7 +39,7 @@ services:
   nodejs2:
     build: 
       context: .
-      dockerfile: ScraperDockerfile
+      dockerfile: 2.Dockerfile
     security_opt:
       - seccomp=./swc_scraper/chrome.json
     image: node:12-slim
