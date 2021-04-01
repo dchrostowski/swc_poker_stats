@@ -286,14 +286,8 @@ const main = async (getCompleted) => {
       sortedRankings[tournamentKeys[i]] = sorted
 
     }
-    if (getCompleted) {
-      await writeFile('./sortedRankingsCompleted.json', JSON.stringify(sortedRankings))
-    }
-    else {
-      await writeFile('./sortedRankings.json', JSON.stringify(sortedRankings))
-
-    }
-    await writeFile('./tournamentRankings.json', JSON.stringify(this.tournamentAndPlayers))
+    
+    
 
 
   }
