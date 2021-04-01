@@ -1,4 +1,6 @@
 import axios from 'axios'
+const fs = require('fs')
+const util = require('util')
 
 import {GET_TOURNAMENT_DATA} from './constants'
 
@@ -9,4 +11,8 @@ export function get_tournament_data() {
         payload: request
     }
 
+}
+
+export function get_tournament_data_from_file() {
+    const file = '/home/'
 }
