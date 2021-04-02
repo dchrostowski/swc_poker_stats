@@ -46,6 +46,12 @@ services:
       - seccomp=./swc_scraper/chrome.json
     image: node:12-slim
     container_name: nodejs2
+    environment: 
+      - MONGO_USERNAME=$MONGO_USERNAME
+      - MONGO_PASSWORD=$MONGO_PASSWORD
+      - MONGO_HOSTNAME=db
+      - MONGO_PORT=$MONGO_PORT
+      - MONGO_DB=$MONGO_DB
     volumes:
       - .:/home/pptruser/app
     command: ["/home/pptruser/app/start_scraper.sh"]

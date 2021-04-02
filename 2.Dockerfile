@@ -1,4 +1,4 @@
-FROM node:14.16.0-alpine
+FROM node:14.16.0-slim
 USER root
 
 # Install latest chrome dev package and fonts to support major charsets (Chinese, Japanese, Arabic, Hebrew, Thai and a few others)
@@ -27,14 +27,14 @@ RUN apt-get update \
 # Install puppeteer so it's available in the container.
 
 #########################################################################################################################3
-#RUN npm i puppeteer \
-#    # Add user so we don't need --no-sandbox.
-#    # same layer as npm install to keep re-chowned files from using up several hundred MBs more space
-#    && groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
-#    && mkdir -p /home/pptruser/Downloads \
-#    && chown -R pptruser:pptruser /home/pptruser \
-#    && chown -R pptruser:pptruser /node_modules \
-#    && usermod -aG node pptruser
+RUN npm i puppeteer \
+    # Add user so we don't need --no-sandbox.
+    # same layer as npm install to keep re-chowned files from using up several hundred MBs more space
+    && groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
+    && mkdir -p /home/pptruser/Downloads \
+    && chown -R pptruser:pptruser /home/pptruser \
+    && chown -R pptruser:pptruser /node_modules \
+    && usermod -aG node pptruser
 ##########################################################################################################################
 # when rebuilding uncomment the above box
 

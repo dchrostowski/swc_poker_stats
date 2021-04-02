@@ -314,7 +314,7 @@ const runContinuously = async function () {
 
   }
 }
-
+console.log(db)
 
 runContinuously()
 //insertRecord()
